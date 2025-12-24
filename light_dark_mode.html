@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="">
+    <div class="container">
+        <div>
+            <h1>Light | Dark Mode</h1>
+            <h2></h2>
+            <button class="btn">OFF</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            if($("body").hasClass("dark")){
+                $("body").removeClass("dark")
+                $("h2").html("Welcome Light Mode")
+                $(".btn").html("OFF")
+            }else{
+                $("body").addClass("dark")
+                $("h2").html("Welcome Dark Mode")
+                $(".btn").html("ON")
+            }
+
+        })
+    })
+
+</script>
+</html>
